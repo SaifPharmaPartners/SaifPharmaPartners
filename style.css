@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4bbecf;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Zorg ervoor dat de tekst links blijft uitgelijnd */
+}
+
+header img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 1em;
+    color: #f9f9f9; /* Maak de tekstkleur wit om contrast met de achtergrond te bieden */
+}
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #f64c72;
+    padding: 15px;
+}
+
+.tab {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.tab:hover {
+    background-color: #4bbecf;
+    color: white;
+}
+
+.tab a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.active-tab {
+    background-color: #4bbecf;
+    color: white;
+}
+
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.info-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px); /* Make each card take up 1/3 of the row */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.info-box:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+h2 {
+    color: #4bbecf;
+    font-size: 1.5em;
+}
+
+p {
+    color: #333;
+}
+
+footer {
+    background-color: #4bbecf;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Zorg ervoor dat de afbeelding niet groter is dan de modale breedte */
+    height: auto; /* Houd de aspect ratio correct */
+}
+
+.modal-content iframe {
+    width: 75%; /* Zorgt ervoor dat de video de volledige breedte van de modal gebruikt */
+    height: auto; /* Hiermee wordt de hoogte automatisch aangepast */
+    aspect-ratio: 16 / 9; /* Dit zorgt ervoor dat de video een correcte 16:9-verhouding behoudt */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .info-box {
+        flex: 1 1 100%; /* Stack cards vertically on small screens */
+    }
+}
