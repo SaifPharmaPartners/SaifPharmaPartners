@@ -1,119 +1,89 @@
 <!DOCTYPE html>
 <html lang="nl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nieuwe DigiD Log-in Methode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
     <header>
-        <link rel="stylesheet" href="style.css">
-        <img src="img/mgn_logo.png" alt="Logo">
-        <div class="header-text">
-            <h1>Nieuwe DigiD Log-in Methode</h1>
-            <p>Alle informatie over de overgang naar de nieuwe veilige DigiD inlogmethode</p>
+        <div class="header-container">
+            <img src="img/mgn_logo.png" alt="Logo" class="logo">
+            <div class="header-text">
+                <h1>Nieuwe DigiD Log-in Methode</h1>
+                <p>Alle informatie over de overgang naar de nieuwe veilige DigiD inlogmethode</p>
+            </div>
         </div>
     </header>
 
-    <div class="navbar">
-        <div class="tab active-tab" id="tab-patienten">
-            <a>Voor Patiënten</a>
+    <div class="button-container">
+        <button id="showInfographic">Infographic Zorgverlener</button>
+        <button id="showHandleiding">Gebruikershandleiding</button>
+        <button id="showVideo">Instructievideo</button>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-box">
+            <h2>Voor de Patiënt</h2>
+            <ul>
+                <li id="faq1">Waarom moet ik mijn inlogmethode veranderen?</li>
+                <li id="faq2">Wat werkt er anders bij de nieuwe inlogmethode?</li>
+                <li id="faq3">Zijn mijn gegevens veilig met de nieuwe methode?</li>
+                <li id="faq4">Moet ik iets doen om over te stappen naar de nieuwe methode?</li>
+                <li id="faq5">Wat als ik er niet uitkom?</li>
+            </ul>
         </div>
-        <div class="tab" id="tab-zorgverleners">
-            <a>Voor Zorgverleners</a>
+
+        <!-- Tweede FAQ-box -->
+        <div class="faq-box">
+            <h2>Voor de Zorgverlener</h2>
+            <ul>
+                <li id="faq6">Wat houdt het in?</li>
+                <li id="faq7">Wat verandert er voor mij?</li>
+                <li id="faq8">Wat verandert er voor patiënten?</li>
+                <li id="faq9">Moet ik nog actie ondernemen?</li>
+            </ul>
         </div>
     </div>
 
-    <div class="container" id="patienten">
-        <!-- Card 0 -->
-        <div class="info-box" id="box1">
-            <h2>Waarom moet ik mijn inlogmethode veranderen?</h2>
-            <p>Korte uitleg over waarom de inlogmethode verandert.</p>
-        </div>
-
-        <!-- Card 1 -->
-        <div class="info-box" id="box2">
-            <h2>Wat werkt er anders bij de nieuwe inlogmethode?</h2>
-            <p>Korte uitleg over wat er precies anders is bij de nieuwe methode.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="info-box" id="box3">
-            <h2>Zijn mijn gegevens veilig met de nieuwe methode?</h2>
-            <p>Korte uitleg over de veiligheid van uw gegevens met de nieuwe inlogmethode.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="info-box" id="box4">
-            <h2>Moet ik iets doen om over te stappen naar de nieuwe methode?</h2>
-            <p>Korte uitleg over eventuele acties die u moet ondernemen om over te stappen.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="info-box" id="box5">
-            <h2>Wat nou als ik er niet uitkom?</h2>
-            <p>Korte uitleg over wat u kunt doen als u problemen ondervindt met de nieuwe methode.</p>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="info-box" id="box6">
-            <h2>Info Poster</h2>
-            <p>Korte uitleg over de informatie die op de poster staat.</p>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="info-box" id="box7">
-            <h2>Instructievideo Inloggen</h2>
-            <p>Korte uitleg over hoe u kunt inloggen met de instructievideo.</p>
-        </div>
-    </div>
-    <div class="container" id="zorgverleners" style="display: none;">
-        <!-- Card 1 -->
-        <div class="info-box" id="zbox1">
-            <h2>Wat houdt het in?</h2>
-            <p>Korte uitleg over wat de overgang naar de nieuwe inlogmethode inhoudt voor zorgverleners.</p>
-        </div>
-    
-        <!-- Card 2 -->
-        <div class="info-box" id="zbox2">
-            <h2>Wat verandert er voor mij?</h2>
-            <p>Korte uitleg over de veranderingen voor zorgverleners bij de nieuwe inlogmethode.</p>
-        </div>
-    
-        <!-- Card 3 -->
-        <div class="info-box" id="zbox3">
-            <h2>Wat verandert er voor patiënten?</h2>
-            <p>Korte uitleg over wat er voor patiënten verandert door de nieuwe inlogmethode.</p>
-        </div>
-    
-        <!-- Card 4 -->
-        <div class="info-box" id="zbox4">
-            <h2>Moet ik nog actie ondernemen?</h2>
-            <p>Korte uitleg over eventuele stappen die zorgverleners moeten nemen tijdens de overgang.</p>
-        </div>
-    
-        <!-- Card 5 -->
-        <div class="info-box" id="zbox5">
-            <h2>Infographic</h2>
-            <p>Korte uitleg over de infographic speciaal voor zorgverleners.</p>
-        </div>
-    
-        <!-- Card 6 -->
-        <div class="info-box" id="zbox6">
-            <h2>Instructievideo</h2>
-            <p>Bekijk de instructievideo over hoe de nieuwe inlogmethode werkt voor zorgverleners.</p>
-        </div>
-    </div>
-
-    <!-- Modal Structure -->
-    <div id="myModal" class="modal">
+    <!-- FAQ Modal -->
+    <div id="faqModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div id="modalText">
-                <!-- Dynamically insert full content here -->
-            </div>
+            <div id="modalText"></div>
         </div>
     </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Instructievideo</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UxjcdJT_PN0"
+                title="Instructievideo DigiD" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Infographic Modal -->
+    <div id="infographicModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Infographic Zorgverlener</h2>
+            <img src="img/infographic_zorgverlener.drawio.png" alt="Infographic Zorgverlener">
+        </div>
+    </div>
+
     <footer>
-        <p>© 2024 - TVS Overgang | Veiligheid staat voorop</p>
+        <img src="https://data.maglr.com/2748/issues/55359/664402/assets/media/0e80cf4711cafb421cae25be95eb955a9fa3d635b9217df340fdba760e8368a3.png" alt="PharmaPartners" class="pharmalogo">
     </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>

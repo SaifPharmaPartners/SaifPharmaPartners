@@ -1,3 +1,4 @@
+/* Algemene body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,109 +6,97 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Header styling */
 header {
     background-color: #4bbecf;
+    padding: 10px 20px;
+    text-align: center;
     color: white;
-    padding: 20px;
+}
+
+.header-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left; /* Zorg ervoor dat de tekst links blijft uitgelijnd */
 }
 
-header img {
+.logo {
     width: 50px;
-    height: auto;
     margin-right: 15px;
 }
 
 .header-text h1 {
+    font-size: 1.8em;
     margin: 0;
-    font-size: 2em;
+    white-space: nowrap;
 }
 
 .header-text p {
     margin: 0;
-    font-size: 1em;
-    color: #f9f9f9; /* Maak de tekstkleur wit om contrast met de achtergrond te bieden */
-}
-h1 {
-    margin: 0;
-    font-size: 2em;
+    font-size: 0.9em;
 }
 
-.navbar {
+/* Knoppen styling */
+.button-container {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
+}
+
+button {
     background-color: #f64c72;
-    padding: 15px;
-}
-
-.tab {
-    background-color: #ffffff;
-    padding: 10px 20px;
+    color: white;
+    border: none;
+    padding: 15px 30px;
     margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
-}
-
-.tab:hover {
-    background-color: #4bbecf;
-    color: white;
-}
-
-.tab a {
-    text-decoration: none;
-    color: #333;
     font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.active-tab {
+button:hover {
     background-color: #4bbecf;
-    color: white;
 }
 
-.container {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* FAQ-container styling */
+.faq-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between cards */
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 20px; /* Ruimte tussen de boxen */
 }
 
-.info-box {
+.faq-box {
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 40px); /* Make each card take up 1/3 of the row */
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.info-box:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
+    flex: 1 1 48%;  /* Zorgt ervoor dat beide boxen naast elkaar komen */
 }
 
 h2 {
+    color: #f64c72;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
     color: #4bbecf;
-    font-size: 1.5em;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
 }
 
-p {
-    color: #333;
-}
-
-footer {
-    background-color: #4bbecf;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+ul li:hover {
+    color: #f64c72;
 }
 
 /* Modal Styles */
@@ -115,41 +104,40 @@ footer {
     display: none; 
     position: fixed; 
     z-index: 1; 
-    padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%; 
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5); 
 }
-
-.modal-content img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%; /* Zorg ervoor dat de afbeelding niet groter is dan de modale breedte */
-    height: auto; /* Houd de aspect ratio correct */
-}
-
-.modal-content iframe {
-    width: 75%; /* Zorgt ervoor dat de video de volledige breedte van de modal gebruikt */
-    height: auto; /* Hiermee wordt de hoogte automatisch aangepast */
-    aspect-ratio: 16 / 9; /* Dit zorgt ervoor dat de video een correcte 16:9-verhouding behoudt */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.pharmalogo{
+    width: 15%;
 }
 
 .modal-content {
     background-color: white;
-    margin: auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
     border-radius: 10px;
+    text-align: left;
 }
-
+.modal-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+.modal-content iframe {
+    width: 75%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .close {
     color: #aaa;
     float: right;
@@ -164,8 +152,31 @@ footer {
     cursor: pointer;
 }
 
+/* Footer styling */
+footer {
+    background-color: #4bbecf; /* Kleur passend bij de header */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Responsive styling voor kleinere schermen */
 @media (max-width: 768px) {
-    .info-box {
-        flex: 1 1 100%; /* Stack cards vertically on small screens */
+    .faq-container {
+        flex-direction: column;  /* FAQ-boxen stapelen bij kleine schermen */
+    }
+
+    .faq-box {
+        flex: 1 1 100%;
     }
 }
+
