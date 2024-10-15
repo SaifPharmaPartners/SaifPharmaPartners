@@ -18,6 +18,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap; /* Zorgt voor wrapping op kleinere schermen */
 }
 
 .logo {
@@ -41,6 +42,7 @@ header {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap; /* Knoppen onder elkaar op kleinere schermen */
 }
 
 button {
@@ -48,11 +50,12 @@ button {
     color: white;
     border: none;
     padding: 15px 30px;
-    margin: 0 10px;
+    margin: 10px; /* Margin aangepast om ruimte te geven bij mobiele weergave */
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+    width: auto;
 }
 
 button:hover {
@@ -110,7 +113,7 @@ ul li:hover {
     height: 100%; 
     background-color: rgba(0, 0, 0, 0.5); 
 }
-.pharmalogo{
+.pharmalogo {
     width: 15%;
 }
 
@@ -171,12 +174,61 @@ footer p {
 
 /* Responsive styling voor kleinere schermen */
 @media (max-width: 768px) {
+    /* Verklein de fontgrootte en pas padding aan voor mobiel */
+    .header-text h1 {
+        font-size: 1.5em;
+    }
+
+    .header-text p {
+        font-size: 0.8em;
+    }
+
+    /* FAQ-container: boxen onder elkaar stapelen */
     .faq-container {
-        flex-direction: column;  /* FAQ-boxen stapelen bij kleine schermen */
+        flex-direction: column;  
+        gap: 10px; /* Verminder de ruimte tussen boxen op kleinere schermen */
+        padding: 10px; /* Minder padding op kleinere schermen */
     }
 
     .faq-box {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Boxen nemen 100% breedte in op mobiel */
+    }
+
+    /* Verklein de padding en fontgrootte van knoppen op mobiele apparaten */
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+        width: 100%; /* Knoppen nemen volledige breedte in op mobiel */
+    }
+
+    /* Modal content aanpassen voor kleinere schermen */
+    .modal-content {
+        width: 90%; /* Verklein de breedte van modals op kleinere schermen */
+        margin: 15% auto;
+    }
+
+    /* Footer aanpassen voor kleinere schermen */
+    footer p {
+        font-size: 0.9em;
     }
 }
 
+@media (max-width: 480px) {
+    /* Nog kleinere aanpassingen voor zeer kleine schermen zoals mobiele telefoons */
+    .header-text h1 {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .faq-box {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.8em;
+    }
+}
